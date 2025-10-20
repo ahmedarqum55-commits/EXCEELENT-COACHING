@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excellent Coaching Centre - Quality Education Since 2010</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <!-- Logo LEFT Side -->
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-graduation-cap logo-icon"></i>
+                Excellent Coaching
+            </a>
+           
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+           
+            <!-- Navigation RIGHT Side -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#courses">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faculty">Faculty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Why Choose Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#stories">Success Stories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#branches">Branches</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link auth-nav-link" href="#auth" data-tab="login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link auth-nav-link" href="#auth" data-tab="signup">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-accent ms-2" data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</button>
+                    </li>
+                </ul>
+               
+                <!-- User Info (shown when logged in) -->
+                <div class="user-info">
+                    <div class="user-avatar" id="userAvatar">U</div>
+                    <span id="userName">User</span>
+                    <button class="btn btn-sm btn-outline-light ms-2" id="logoutBtn">Logout</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Auth Section -->
+    <section id="auth" class="auth-section">
+        <div class="container auth-container">
+            <div class="auth-tabs">
+                <div class="auth-tab-header">
+                    <div class="auth-tab active" data-tab="login">Login</div>
+                    <div class="auth-tab" data-tab="signup">Sign Up</div>
+                </div>
+                <div class="auth-tab-content">
+                    <!-- Login Form -->
+                    <form id="loginForm" class="auth-form active">
+                        <h3 class="text-center mb-4">Login to Your Account</h3>
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="loginEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginPassword" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                        <div class="form-note">
+                            <p>Don't have an account? <a href="#" class="switch-tab" data-tab="signup">Sign up here</a></p>
+                        </div>
+                    </form>
+                   
+                    <!-- Signup Form -->
+                    <form id="signupForm" class="auth-form">
+                        <h3 class="text-center mb-4">Create a New Account</h3>
+                        <div class="mb-3">
+                            <label for="signupName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="signupName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signupEmail" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="signupEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signupPhone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="signupPhone">
+                        </div>
+                        <div class="mb-3">
+                            <label for="signupPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="signupPassword" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirmPassword" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="termsCheck" required>
+                            <label class="form-check-label" for="termsCheck">I agree to the terms and conditions</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+                        <div class="form-note">
+                            <p>Already have an account? <a href="#" class="switch-tab" data-tab="login">Login here</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero-section d-flex align-items-center" id="home">
+        <div class="container-fluid">
+            <div class="row g-0 hero-row">
+                <!-- Left Side (Text + Buttons) -->
+                <div class="col-12 col-lg-6 hero-text d-flex flex-column justify-content-center align-items-start p-5">
+                    <h1 class="display-3 fw-bold text-gradient mb-3 animate-slide">
+                        Shaping <span class="highlight">Futures</span><br> for Over a Decade
+                    </h1>
+                    <p class="lead mb-4 fade-in-text">
+                        Empowering students through expert coaching in Commerce, Mathematics, Languages,
+                        and Competitive Exams — trusted by thousands to achieve excellence.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#courses" class="btn btn-accent btn-lg shadow-glow">Explore Courses</a>
+                        <a href="#contact" class="btn btn-outline-light btn-lg shadow-outline">Contact Us</a>
+                    </div>
+                </div>
+       
+                <!-- Right Side (Animated Background / Visual Area) -->
+                <div class="col-12 col-lg-6 hero-visual d-flex justify-content-center align-items-center">
+                    <div class="floating-sphere"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 col-6 stat-item">
+                    <div class="stat-number">2,500+</div>
+                    <div class="stat-text">Students Enrolled</div>
+                </div>
+                <div class="col-md-3 col-6 stat-item">
+                    <div class="stat-number">12+</div>
+                    <div class="stat-text">Years Experience</div>
+                </div>
+                <div class="col-md-3 col-6 stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-text">Expert Faculty</div>
+                </div>
+                <div class="col-md-3 col-6 stat-item">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-text">Success Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-5">
+        <div class="container">
+            <h2 class="section-title center text-center">Our Courses</h2>
+            <p class="text-center mb-5">We offer comprehensive coaching programs designed to help students excel in their academic pursuits.</p>
+           
+            <div class="row g-4">
+                <!-- Commerce Course -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            <h4 class="mb-0">Commerce</h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Comprehensive coaching for Commerce stream students with focus on practical knowledge and exam preparation.</p>
+                            <ul class="course-list">
+                                <li><i class="fas fa-check"></i> Accountancy</li>
+                                <li><i class="fas fa-check"></i> Economics</li>
+                                <li><i class="fas fa-check"></i> Business Studies</li>
+                                <li><i class="fas fa-check"></i> Statistics</li>
+                                <li><i class="fas fa-check"></i> Commercial Law</li>
+                            </ul>
+                            <div class="price">Rs. 8,000 / term</div>
+                            <div class="d-flex flex-column flex-sm-row gap-2 btn-group-responsive">
+                                <button class="btn btn-primary flex-fill" data-bs-toggle="modal" data-bs-target="#courseDetailModal" data-course="Commerce">View Details</button>
+                                <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#enrollModal" data-course="Commerce">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+                <!-- Mathematics Course -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            <h4 class="mb-0">Mathematics</h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Master mathematical concepts with our expert faculty and proven teaching methodology.</p>
+                            <ul class="course-list">
+                                <li><i class="fas fa-check"></i> Algebra</li>
+                                <li><i class="fas fa-check"></i> Geometry</li>
+                                <li><i class="fas fa-check"></i> Calculus</li>
+                                <li><i class="fas fa-check"></i> Statistics</li>
+                                <li><i class="fas fa-check"></i> Trigonometry</li>
+                            </ul>
+                            <div class="price">Rs. 7,000 / term</div>
+                            <div class="d-flex flex-column flex-sm-row gap-2 btn-group-responsive">
+                                <button class="btn btn-primary flex-fill" data-bs-toggle="modal" data-bs-target="#courseDetailModal" data-course="Mathematics">View Details</button>
+                                <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#enrollModal" data-course="Mathematics">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+                <!-- Languages Course -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            <h4 class="mb-0">Languages</h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Improve communication skills and language proficiency with our comprehensive language courses.</p>
+                            <ul class="course-list">
+                                <li><i class="fas fa-check"></i> English</li>
+                                <li><i class="fas fa-check"></i> Urdu</li>
+                                <li><i class="fas fa-check"></i> Arabic</li>
+                                <li><i class="fas fa-check"></i> Communication Skills</li>
+                                <li><i class="fas fa-check"></i> Public Speaking</li>
+                            </ul>
+                            <div class="price">Rs. 5,000 / term</div>
+                            <div class="d-flex flex-column flex-sm-row gap-2 btn-group-responsive">
+                                <button class="btn btn-primary flex-fill" data-bs-toggle="modal" data-bs-target="#courseDetailModal" data-course="Languages">View Details</button>
+                                <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#enrollModal" data-course="Languages">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title center text-center">Why Choose Excellent Coaching?</h2>
+            <p class="text-center mb-5">We are committed to providing the best educational experience for our students.</p>
+           
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <h4>Expert Faculty</h4>
+                        <p>Learn from highly qualified and experienced teachers who are passionate about education.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h4>Comprehensive Study Material</h4>
+                        <p>Get access to well-researched study materials, practice tests, and revision notes.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Proven Results</h4>
+                        <p>Join thousands of successful students who have achieved their academic goals with us.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faculty Section -->
+    <section id="faculty" class="py-5">
+        <div class="container">
+            <h2 class="section-title center text-center">Our Faculty</h2>
+            <p class="text-center mb-5">Meet our team of dedicated and experienced educators.</p>
+           
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card text-center h-100">
+                        <div class="card-body">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Mr. Ahmed" class="faculty-img">
+                            <h3 class="card-title">Mr. Ahmed</h3>
+                            <p class="text-muted">M.Com, 12 years experience</p>
+                            <p class="card-text">Specialized in Commerce subjects with a track record of producing top rankers in board exams.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center h-100">
+                        <div class="card-body">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Ms. Sara" class="faculty-img">
+                            <h3 class="card-title">Ms. Sara</h3>
+                            <p class="text-muted">MSc Mathematics, 10 years experience</p>
+                            <p class="card-text">Expert in making complex mathematical concepts easy to understand through innovative teaching methods.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center h-100">
+                        <div class="card-body">
+                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Mr. Bilal" class="faculty-img">
+                            <h3 class="card-title">Mr. Bilal</h3>
+                            <p class="text-muted">MA English, 8 years experience</p>
+                            <p class="card-text">Specialized in language training and communication skills development with a focus on practical application.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories Section -->
+    <section id="stories" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title center text-center">Success Stories</h2>
+            <p class="text-center mb-5">Hear from our students who have achieved remarkable success.</p>
+           
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="success-story">
+                        <h4>Ali R.</h4>
+                        <p class="text-muted">Top in Commerce 2024</p>
+                        <p>"Excellent Coaching Centre helped me secure the top position in Commerce. Their teaching methodology, regular tests, and personalized attention were key to my success. The faculty goes above and beyond to ensure every student understands the concepts thoroughly."</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="success-story">
+                        <h4>Fatima S.</h4>
+                        <p class="text-muted">Won district Maths Olympiad</p>
+                        <p>"The Mathematics faculty at Excellent Coaching is exceptional. They helped me develop problem-solving skills and analytical thinking that led to my Olympiad victory. The practice sessions and mock tests were incredibly helpful in building my confidence."</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="success-story">
+                        <h4>Usman K.</h4>
+                        <p class="text-muted">Represented national English debate</p>
+                        <p>"The language courses improved my communication skills dramatically. I went from being hesitant to speak to representing my country in debates. The focus on practical communication rather than just textbook knowledge made all the difference."</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="success-story">
+                        <h4>Sana J.</h4>
+                        <p class="text-muted">Scored 98% in Board Exams</p>
+                        <p>"The comprehensive study material and regular revision tests at Excellent Coaching helped me achieve 98% in my board exams. The teachers are always available to clear doubts and provide guidance. I couldn't have asked for a better coaching experience."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Branches Section -->
+    <section id="branches" class="py-5">
+        <div class="container">
+            <h2 class="section-title center text-center">Our Branches</h2>
+            <p class="text-center mb-5">Visit us at any of our conveniently located branches across the city.</p>
+           
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="branch-card">
+                        <div class="branch-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Saddar</h3>
+                        <p>12 Education Road, Saddar, City</p>
+                        <p class="text-muted">Phone: +92 300 1111111</p>
+                        <button class="btn btn-outline-primary mt-2" data-bs-toggle="modal" data-bs-target="#branchModal" data-branch="Saddar">View Details</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="branch-card">
+                        <div class="branch-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Gulberg</h3>
+                        <p>45 College Street, Gulberg</p>
+                        <p class="text-muted">Phone: +92 300 2222222</p>
+                        <button class="btn btn-outline-primary mt-2" data-bs-toggle="modal" data-bs-target="#branchModal" data-branch="Gulberg">View Details</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="branch-card">
+                        <div class="branch-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>DHA</h3>
+                        <p>Phase 4, Main Road, DHA</p>
+                        <p class="text-muted">Phone: +92 300 3333333</p>
+                        <button class="btn btn-outline-primary mt-2" data-bs-toggle="modal" data-bs-target="#branchModal" data-branch="DHA">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title center text-center">Contact Us</h2>
+            <p class="text-center mb-5">Get in touch with us for any inquiries or to schedule a visit.</p>
+           
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Get In Touch</h3>
+                            <p><i class="fas fa-map-marker-alt text-primary me-2"></i> 12 Education Road, Saddar, City</p>
+                            <p><i class="fas fa-phone text-primary me-2"></i> +92 300 0000000</p>
+                            <p class="mb-2">
+                                <i class="fas fa-envelope text-primary me-2"></i>
+                                <a href="mailto:info@excellentcoaching.pk" class="text-decoration-none">
+                                    info@excellentcoaching.pk
+                                </a>
+                            </p>
+                            <div class="mt-4">
+                                <h5>Office Hours</h5>
+                                <p>Monday - Friday: 9:00 AM - 7:00 PM</p>
+                                <p>Saturday: 9:00 AM - 2:00 PM</p>
+                                <p>Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Quick Inquiry</h3>
+                            <form id="inquiryForm">
+                                <div class="mb-3">
+                                    <input type="text" id="inquiryName" class="form-control" placeholder="Your Name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="email" id="inquiryEmail" class="form-control" placeholder="Your Email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="tel" id="inquiryPhone" class="form-control" placeholder="Your Phone">
+                                </div>
+                                <div class="mb-3">
+                                    <select id="inquiryCourse" class="form-select" required>
+                                        <option value="" selected disabled>Select Course</option>
+                                        <option>Commerce</option>
+                                        <option>Mathematics</option>
+                                        <option>Languages</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <textarea id="inquiryMessage" class="form-control" rows="4" placeholder="Your Message" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>Excellent Coaching Centre</h5>
+                    <p>We have been delivering quality education for over 10 years, shaping futures and building successful careers through dedicated teaching and personalized attention.</p>
+                    <div class="social-icons mt-3">
+                        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/i/flow/login?lang=en"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/accounts/login/?hl=en"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/uas/login-submit"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#faculty">Faculty</a></li>
+                        <li><a href="#stories">Success Stories</a></li>
+                        <li><a href="#branches">Branches</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Courses</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#courses">Commerce</a></li>
+                        <li><a href="#courses">Mathematics</a></li>
+                        <li><a href="#courses">Languages</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Contact Info</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> 12 Education Road, Saddar</p>
+                    <p><i class="fas fa-phone me-2"></i> +92 300 0000000</p>
+                    <p class="mb-2">
+                        <i class="fas fa-envelope text-white me-2"></i>
+                        <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fwww.google.com%3Fhl%3Den-US&ec=GAlA8wE&hl=en&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S789089378%3A1760539845872222" class="text-decoration-none">
+                            info@excellentcoaching.pk
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p>&copy; 2025 Excellent Coaching Centre. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Course Detail Modal -->
+    <div class="modal fade" id="courseDetailModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="courseDetailModalLabel">Course Details</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="courseDetailContent">
+                        <!-- Content will be loaded dynamically -->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enroll Modal -->
+    <div class="modal fade" id="enrollModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Enroll in Course</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="enrollForm">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="enrollName" placeholder="Full Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="enrollEmail" placeholder="Email Address" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="tel" class="form-control" id="enrollPhone" placeholder="Phone Number" required>
+                        </div>
+                        <div class="mb-3">
+                            <select class="form-select" id="enrollCourseSelect" required>
+                                <option value="" selected disabled>Select Course</option>
+                                <option>Commerce</option>
+                                <option>Mathematics</option>
+                                <option>Languages</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <select class="form-select" id="enrollBranch" required>
+                                <option value="" selected disabled>Select Branch</option>
+                                <option>Saddar</option>
+                                <option>Gulberg</option>
+                                <option>DHA</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="enrollTermsCheck" required>
+                            <label class="form-check-label" for="enrollTermsCheck">I agree to the terms and conditions</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Submit Registration</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Branch Detail Modal -->
+    <div class="modal fade" id="branchModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Branch Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="branchDetailContent">
+                        <!-- Content will be loaded dynamically -->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</button>
+                    <a href="https://maps.google.com" target="_blank" class="btn btn-outline-primary">View on Map</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
